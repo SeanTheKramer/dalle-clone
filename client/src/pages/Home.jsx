@@ -27,7 +27,7 @@ const Home = () => {
         setLoading(true);
         
         try {
-            const response = await fetch('http://localhost:8080/api/v1/posts', {
+            const response = await fetch('https://dalle-clone-cqko.onrender.com/api/v1/posts', {
                 method: 'GET',
                 headers: {
                     'Content-Type' : 'application/json',
@@ -70,7 +70,7 @@ const Home = () => {
     <section className="max-w-7xl mx auto">
         <div>
             <h1 className="font-extrabold text-[#222328] text-[32px]">The Community Showcase</h1>
-            <p className="mt-2 text-[#666e75] text-[16px] max-w [500px]">Browse through a collection of imaginative and visually stunning images created by DALL-E AI</p>
+            <p className="mt-2 text-[#666e75] text-[16px] max-w [500px]">Peruse an array of creative and aesthetically impressive visuals produced by the DALL-E AI</p>
         </div>
 
         <div className="mt-16">

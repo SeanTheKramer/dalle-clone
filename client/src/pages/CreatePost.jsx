@@ -20,7 +20,7 @@ const CreatePost = () => {
     if (form.prompt) {
       try {
         setGeneratingImg(true);
-        const response = await fetch('http://localhost:8080/api/v1/dalle', {
+        const response = await fetch('https://dalle-clone-cqko.onrender.com/api/v1/dalle', {
           method: 'POST',
           headers: {
             'Content-Type' : 'application/json',
@@ -49,7 +49,7 @@ const CreatePost = () => {
     if (form.prompt && form.photo) {
       setLoading(true);
       try {
-        const response = await fetch('http://localhost:8080/api/v1/posts', {
+        const response = await fetch('https://dalle-clone-cqko.onrender.com/api/v1/posts', {
           method: 'POST',
           headers: {
             'Content-Type' : 'application/json',
@@ -82,7 +82,7 @@ const CreatePost = () => {
     <section className="max-w-7xl mx-auto">
       <div>
         <h1 className="font-extrabold text-[#222328] text-[32px]">Create</h1>
-        <p className="mt-2 text-[#666e75] text-[16px] max-w [500px]">Create imaginative and visually stunning images through DALL-E AI and share them with the community</p>
+        <p className="mt-2 text-[#666e75] text-[16px] max-w [500px]">Utilize DALL-E AI to generate captivating and visually striking images, then share them within the community to showcase your creativity.</p>
       </div>
 
       <form className="mt-16 max-w-3xl" onSubmit={handleSubmit}>
@@ -140,7 +140,7 @@ const CreatePost = () => {
         </div>
 
         <div className="mt-10">
-            <p className="mt-2 text-[#666e75] text-[14px]">Once you have created the image you want, you can share it with others in the community</p>
+            <p className="mt-2 text-[#666e75] text-[14px]">After producing the desired image, you can share it with fellow members of the community</p>
             <button
               type="submit"
               className="mt-3 text-white bg-[#6469ff] font-medium rounded-md text-sm w-full sm:w-auto px-5 py-2.5 text-center"
